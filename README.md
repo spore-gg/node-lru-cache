@@ -1,4 +1,4 @@
-# lru cache
+# A Deno-compatible version of [lru cache](https://github.com/isaacs/node-lru-cache)
 
 A cache object that deletes the least-recently-used items.
 
@@ -13,13 +13,15 @@ npm install lru-cache --save
 ## Usage:
 
 ```javascript
-var LRU = require("lru-cache")
-  , options = { max: 500
-              , length: function (n, key) { return n * 2 + key.length }
-              , dispose: function (key, n) { n.close() }
-              , maxAge: 1000 * 60 * 60 }
-  , cache = new LRU(options)
-  , otherCache = new LRU(50) // sets just the max size
+import LRU from "https://deno.land/x/lru_cache@6.0.0/index.ts";
+
+const cache = new LRU<any, any>({
+    max: 500
+    , length: (n, key) => n * 2 + key!.length
+    , dispose: (key, n) =>  n.close?.() // some disposal function
+    , maxAge: 1000 * 60 * 60
+  });
+const otherCache = new LRU(50) // sets just the max size
 
 cache.set("key", "value")
 cache.get("key") // "value"

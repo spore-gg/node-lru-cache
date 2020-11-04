@@ -1,7 +1,7 @@
-'use strict'
+// @ts-nocheck
 
 // A linked list to keep track of recently-used-ness
-const Yallist = require('yallist')
+import Yallist from 'https://deno.land/x/yallist@4.0.0/index.ts';
 
 const MAX = Symbol('max')
 const LENGTH = Symbol('length')
@@ -24,7 +24,7 @@ const naiveLength = () => 1
 //
 // cache is a Map (or PseudoMap) that matches the keys to
 // the Yallist.Node object.
-class LRUCache {
+export default class LRUCache {
   constructor (options) {
     if (typeof options === 'number')
       options = { max: options }
@@ -330,5 +330,3 @@ const forEachStep = (self, fn, node, thisp) => {
   if (hit)
     fn.call(thisp, hit.value, hit.key, self)
 }
-
-module.exports = LRUCache
