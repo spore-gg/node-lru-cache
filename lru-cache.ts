@@ -24,7 +24,7 @@ const naiveLength = () => 1
 //
 // cache is a Map (or PseudoMap) that matches the keys to
 // the Yallist.Node object.
-export default class LRUCache {
+export class LRUCache {
   constructor(options) {
     if (typeof options === 'number')
       options = { max: options }
