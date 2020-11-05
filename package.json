@@ -1,7 +1,0 @@
-{
-  "name": "lru-cache",
-  "description": "A cache object that deletes the least-recently-used items.",
-  "devDependencies": {
-    "@types/lru-cache": "^5.1.0"
-  }
-}
