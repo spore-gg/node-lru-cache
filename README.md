@@ -7,7 +7,7 @@ A cache object that deletes the least-recently-used items.
 ## Usage:
 
 ```typescript
-import LRU from "https://deno.land/x/lru_cache@6.0.0-deno.2/mod.ts";
+import LRU from "https://deno.land/x/lru_cache@6.0.0-deno.4/mod.ts";
 
 const cache = new LRU<any, any>({
     max: 500
