@@ -1,13 +1,11 @@
-# A Deno-compatible version of [lru cache](https://github.com/isaacs/node-lru-cache)
+# A TS version of [lru cache](https://github.com/isaacs/node-lru-cache)
 
 A cache object that deletes the least-recently-used items.
-
-[![Build Status](https://travis-ci.org/isaacs/node-lru-cache.svg?branch=master)](https://travis-ci.org/isaacs/node-lru-cache) [![Coverage Status](https://coveralls.io/repos/isaacs/node-lru-cache/badge.svg?service=github)](https://coveralls.io/github/isaacs/node-lru-cache)
 
 ## Usage:
 
 ```typescript
-import LRU from "https://deno.land/x/lru_cache@6.0.0-deno.4/mod.ts";
+import LRU from "lru-cache";
 
 const cache = new LRU<any, any>({
     max: 500
