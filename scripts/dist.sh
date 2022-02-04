@@ -8,5 +8,4 @@ npm install
 
 TSC_PATH=$(npm bin)/tsc
 
-echo "$TSC_PATH"
 $TSC_PATH --project .
