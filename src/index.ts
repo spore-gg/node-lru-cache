@@ -1,5 +1,5 @@
 // A linked list to keep track of recently-used-ness
-import * as Yallist from "yallist"
+import Yallist from "yallist"
 
 const MAX = Symbol('max')
 const LENGTH = Symbol('length')

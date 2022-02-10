@@ -1,4 +1,4 @@
-import * as Yallist from "yallist";
+import Yallist from "yallist";
 declare const MAX: unique symbol;
 declare const LENGTH: unique symbol;
 declare const LENGTH_CALCULATOR: unique symbol;
